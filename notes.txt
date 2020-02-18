@@ -1,0 +1,34 @@
+(git not used)
+git add *
+git commit -m "add test html"
+git push origin master
+
+-----> like this
+npm run build
+in vs code: 
+open build folder
+bottom left azure symbol, click blue arrow
+
+start API
+npm start in API directory, open http://localhost:9000/testAPI 
+
+// setup python
+npm install python-shell
+
+
+>> TODO on azure install opencv2 in console
+copied api folder to build
+also copied .vscode folder
+in callPython.js: change address ../../runtrackers.py
+
+(maybe move api in public...?)
+what path should we call instead of localhost/9000?
+
+change call in App.js before build
+
+in console of azure
+cd ..
+cd ..
+cd python364x64
+
+pip install opencv-python
