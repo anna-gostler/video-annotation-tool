@@ -14,19 +14,19 @@ code {
 
 .bbox {
   color: #11cdde;
-  position:absolute;
+  position: absolute;
   border-style: solid;
   border-width: 1px;
 }
 
 .resizebox {
-  color: #11cdde;
+  color:#f89d7d;
   position:absolute;
   border-right-style: solid;
   border-bottom-style: solid;
-  border-width: 1px;
-  width: 5px;
-  height: 5px;
+  border-width: 3px;
+  width: 10px;
+  height: 10px;
 }
 
 #FrameArea {
@@ -44,4 +44,166 @@ code {
 #btn_runtracker {
   float: right;
   margin-left:10px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+}
+
+
+.selected {
+  color: #f89d7d;
+  border-style: solid;
+  border-width: 3px;
+}
+
+
+/* ---------------------- slider ----------------------- */
+.backgroundSlider {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  height: 3px;
+  border-radius: 0px; 
+  appearance: none;
+  width: 100%; /* Full-width */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px;
+  border-radius: 50%; 
+  /*background: #4CAF50;  Green background */
+  cursor: pointer; /* Cursor on hover */
+  opacity: 0.5;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px;
+  border-radius: 50%;
+  /*background: #4CAF50;  Green background */
+  cursor: pointer; /* Cursor on hover */
+  opacity: 0.5;
+}
+
+#Thumb {
+  width: 10px;
+  height: 25px;
+  border-radius: 0%;
+  cursor: pointer; /* Cursor on hover */
+  position: relative;
+  /*left: 3px;*/
+  left: 1px;
+  top: -58px;
+}
+
+#myinput {
+  background: linear-gradient(to right, #82CFD0 0%, #82CFD0 50%, #fff 50%, #fff 100%);
+  border: solid 1px #82CFD0;
+  border-radius: 8px;
+  height: 7px;
+  width: 356px;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+/* rotating image */
+.rotating {
+  display: none;
+  position: absolute;
+  margin-left: 10px;
+  width: 50px;
+  height: 50px;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+
+/* speech bubble*/
+p.speech {
+  position: absolute;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid rgb(248, 157, 125);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  font-size: small;
+}
+
+p.speech:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 36px;
+  top: 50px;
+  border: 17.7px solid;
+  border-color: rgb(248, 157, 125) transparent transparent rgb(248, 157, 125);
+}
+
+p.speech:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 38px;
+  top: 50px;
+  border: 15px solid;
+  border-color: #fff transparent transparent #fff;
+}
+
+p.speechflipped {
+  position: absolute;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid rgb(248, 157, 125);
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  font-size: small;
+}
+
+p.speechflipped:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 35.3px;
+  top: -35px;
+  border: 17.7px solid;
+  border-color: rgb(248, 157, 125) transparent transparent rgb(248, 157, 125);
+  transform: scale(1,-1);
+}
+
+p.speechflipped:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 38px;
+  top: -29px;
+  border: 15px solid;
+  border-color: #fff transparent transparent #fff;
+  transform: scale(1,-1);
 }
