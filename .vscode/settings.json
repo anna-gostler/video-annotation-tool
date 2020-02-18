@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/4746936f-e967-4b6b-900f-b9849b30135f/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/video-annotation-tool",
-    "appService.deploySubpath": ""
-}
