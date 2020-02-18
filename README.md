@@ -1,1 +1,1 @@
-[Image description](annotation-1.PNG)
+![screenshot](annotation-1.PNG)
